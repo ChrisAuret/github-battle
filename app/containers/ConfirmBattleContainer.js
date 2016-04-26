@@ -9,7 +9,7 @@ var ConfirmBattleContainer = React.createClass({
     getInitialState: function() {
         return {
             isLoading : true,
-            playersInfo: [],
+            playersInfo: []
         }  
     },
     componentDidMount: function(){
@@ -35,9 +35,9 @@ var ConfirmBattleContainer = React.createClass({
             <ConfirmBattle
             isLoading={this.state.isLoading} 
             onInitiateBattle={this.handleInitiateBattle}
-            playersInfo={this.state.playersInfo} /> 
+            playersInfo = {this.state.playersInfo} /> 
         )
     }
 });
-
-module.exports = ConfirmBattleContainer;
+  
+module.exports = ConfirmBattleContainer;  
