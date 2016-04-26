@@ -2,7 +2,7 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var transparentBg = require('../styles/index.js').transparentBg;
 
-// fucntional stateless components
+// functional stateless components
 function Prompt(props){
     return(
         <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
@@ -13,6 +13,7 @@ function Prompt(props){
                             <input className="form-control" placeholder="Github username" type="text" 
                                 onChange={props.onUpdateUser}
                                 value={props.username} 
+                                placeholder="ChrisAuret"
                             />
                         </div>
                         <div className="form-group col-sm-4 col-sm-offset-4">
