@@ -17,6 +17,14 @@ function StartOver(){
   )
 }
 
+function Tie (props) {
+  return (
+    <MainContainer>
+      <h1>It's a Tie!</h1>
+      <StartOver />
+    </MainContainer>
+  )
+}
 
 function Results (props) {
   
@@ -29,8 +37,7 @@ function Results (props) {
   if(props.scores[0] === props.scores[1]){
     return (
       <MainContiainer>
-        <h1>It's a tie!</h1>
-          <StartOver />
+        <Tie scores={props.scores} playersInfo={props.playersInfo}/>
       </MainContiainer>
     )
   }
