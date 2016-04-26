@@ -5,7 +5,7 @@ var UserDetails = require('../components/UserDetails');
 var UserDetailsWrapper = require('../components/UserDetailsWrapper');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-
+var MainContiainer = require('../components/MainContainer');
 
 function StartOver(){
   return (
@@ -28,10 +28,10 @@ function Results (props) {
   
   if(props.scores[0] === props.scores[1]){
     return (
-      <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
+      <MainContiainer>
         <h1>It's a tie!</h1>
           <StartOver />
-      </div>
+      </MainContiainer>
     )
   }
   
@@ -39,7 +39,7 @@ function Results (props) {
   var losingIndex = winninIndex === 0 ? 1 : 0; 
   
   return (
-    <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
+    <MainContainer>
       <h1>Results</h1>
       <div className="col-sm-8 col-sm-offset-2">
         <UserDetailsWrapper header="Winner">
@@ -50,7 +50,7 @@ function Results (props) {
         </UserDetailsWrapper>
       </div>
         <StartOver/>
-    </div>
+    </MainContainer>
   )
 }
 
