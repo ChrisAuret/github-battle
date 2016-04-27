@@ -31,7 +31,7 @@ function Results (props) {
   
   if(props.isLoading === true){
     return (
-      <Loading/>
+      <Loading text={"One moment"} speed={100}/>
     )
   }
   
