@@ -5,7 +5,8 @@ var UserDetails = require('../components/UserDetails');
 var UserDetailsWrapper = require('../components/UserDetailsWrapper');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var MainContiainer = require('../components/MainContainer');
+var MainContainer = require('../components/MainContainer');
+var Loading = require("../components/Loading");
 
 function StartOver(){
   return (
@@ -30,15 +31,15 @@ function Results (props) {
   
   if(props.isLoading === true){
     return (
-      <p>LOADING</p>
+      <Loading/>
     )
   }
   
   if(props.scores[0] === props.scores[1]){
     return (
-      <MainContiainer>
+      <MainContainer>
         <Tie scores={props.scores} playersInfo={props.playersInfo}/>
-      </MainContiainer>
+      </MainContainer>
     )
   }
   
