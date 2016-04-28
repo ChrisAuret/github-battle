@@ -3,10 +3,10 @@ var PropTypes = React.PropTypes;
 var styles = require('../styles');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var UserDetails = require('../components/UserDetails');
-var UserDetailsWrapper = require('../components/UserDetailsWrapper');
-var MainContainer = require('../components/MainContainer');
-var Loading = require("../components/Loading");
+var UserDetailsWrapper = require('./UserDetailsWrapper');
+var UserDetails = require('./UserDetails');
+var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function ConfirmBattle (props) {
   return props.isLoading === true

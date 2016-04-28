@@ -31,12 +31,12 @@ function getPlayersData (player) {
 
 function calculateScores (players) {
   return [
-    players[0].followers * 3 + players[0].totalStars,
-    players[1].followers * 3 + players[1].totalStars
-  ]
-}
+      players[0].followers * 3 + players[0].totalStars,
+      players[1].followers * 3 + players[1].totalStars
+    ]
+  }
 
-var helpers = {
+  var helpers = {
   getPlayersInfo: function (players) {
     return axios.all(players.map(function (username) {
       return getUserInfo(username)
